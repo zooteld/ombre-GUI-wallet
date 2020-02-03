@@ -13,28 +13,26 @@ export const address = (input) => {
     if(!(/^[0-9A-Za-z]+$/.test(input))) return false
 
     switch (input.substring(0,4)) {
-        case "Sumo":
-        case "RYoL":
+        case "Shade":
+        case "cash":
         case "Suto":
-        case "RYoT":
+        case "Te":
             return input.length === 99
 
-        case "Subo":
-        case "Suso":
             return input.length == 98
 
-        case "RYoS":
-        case "RYoU":
+        case "Suba":
+        case "Ts":
             return input.length == 99
 
-        case "Sumi":
-        case "RYoN":
+        case "Shadow":
+        case "casi":
         case "Suti":
-        case "RYoE":
+        case "Ti":
             return input.length === 110
 
-        case "RYoK":
-        case "RYoH":
+        case "Shad3":
+        case "Tu":
             return input.length === 55
 
         default:

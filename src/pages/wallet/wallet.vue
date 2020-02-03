@@ -9,7 +9,7 @@
             <div class="infoBox">
                 <div class="infoBoxContent">
                     <div class="text"><span>Balance</span></div>
-                    <div class="value"><span><FormatRyo :amount="info.balance" /></span></div>
+                    <div class="value"><span><FormatOMB :amount="info.balance" /></span></div>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
             <div class="infoBox">
                 <div class="infoBoxContent">
                     <div class="text"><span>Unlocked balance</span></div>
-                    <div class="value"><span><FormatRyo :amount="info.unlocked_balance" /></span></div>
+                    <div class="value"><span><FormatOMB :amount="info.unlocked_balance" /></span></div>
                 </div>
             </div>
         </div>
@@ -262,7 +262,7 @@
 const { clipboard } = require("electron")
 import { mapState } from "vuex"
 import AddressHeader from "components/address_header"
-import FormatRyo from "components/format_ryo"
+import FormatOMB from "components/format_omb"
 import TxList from "components/tx_list"
 export default {
     computed: mapState({
@@ -545,7 +545,7 @@ export default {
         }
     },
     components: {
-        FormatRyo,
+        FormatOMB,
         AddressHeader,
         TxList
     },

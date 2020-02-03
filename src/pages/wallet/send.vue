@@ -5,7 +5,7 @@
         <div class="row q-pt-sm q-mx-md q-mb-none items-center non-selectable" style="height: 44px;">
 
             <div class="col-8">
-                <q-icon name="call_made" size="24px" /> Send Ryo
+                <q-icon name="call_made" size="24px" /> Send OMB
             </div>
 
             <div class="col-4">

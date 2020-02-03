@@ -47,10 +47,9 @@ Ombre wallet will scan default folders used by Lite wallet and GUI wallet and wi
 ```
 npm install -g quasar-cli
 git clone https://github.com/ombre-project/ombre-gui-wallet
-cd ombre-gui-wallet
-cd bin
-cp -r {path to ombred.exe}
-cp -r {path to ombre-wallet-rpc.exe}
+cd ombre-gui-wallet/bin
+cp <path to ombred>
+cp <path to ombre-wallet-rpc>
 cd ..
 npm install
 quasar build -m electron -t mat

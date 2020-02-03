@@ -538,7 +538,7 @@
                                     <q-icon name="access_time" /> Waiting...
                                 </template>
                                 <template v-else>
-                                    <FormatRyo :amount="props.row.reward" />
+                                    <FormatOMB :amount="props.row.reward" />
                                 </template>
                             </q-td>
                             <q-td key="effort" :props="props">
@@ -653,7 +653,7 @@
                                                         <q-icon name="access_time" /> Waiting...
                                                     </template>
                                                     <template v-else>
-                                                        <FormatRyo :amount="block.reward" />
+                                                        <FormatOMB :amount="block.reward" />
                                                     </template>
                                                 </span>
                                             </div>
@@ -737,7 +737,7 @@ import Vue from "vue"
 import { required, between } from "vuelidate/lib/validators"
 import { mapState } from "vuex"
 import HashrateChart from "components/hashrate_chart"
-import FormatRyo from "components/format_ryo"
+import FormatOMB from "components/format_omb"
 import Identicon from "components/identicon"
 import distanceInWords from "date-fns/distance_in_words"
 const { clipboard } = require("electron")
@@ -1209,7 +1209,7 @@ export default {
     },
     components: {
         HashrateChart,
-        FormatRyo,
+        FormatOMB,
         Identicon
     }
 }

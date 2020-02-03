@@ -338,7 +338,7 @@ export class Backend {
                 return;
             }
 
-            let lmdb_dir = path.join(this.config_data.app.data_dir, "lmdb02")
+            let lmdb_dir = path.join(this.config_data.app.data_dir, "lmdb")
             let log_dir = path.join(this.config_data.app.data_dir, "logs")
             let wallet_dir = path.join(this.config_data.app.data_dir, "wallets")
             let gui_dir = path.join(this.config_data.app.data_dir, "gui")
@@ -349,7 +349,7 @@ export class Backend {
                 if (!fs.existsSync(testnet_dir))
                     fs.mkdirSync(testnet_dir);
 
-                lmdb_dir = path.join(testnet_dir, "lmdb02")
+                lmdb_dir = path.join(testnet_dir, "lmdb")
                 log_dir = path.join(testnet_dir, "logs")
                 wallet_dir = path.join(testnet_dir, "wallets")
                 gui_dir = path.join(testnet_dir, "gui")

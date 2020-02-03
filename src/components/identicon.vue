@@ -78,31 +78,29 @@ export default {
             if(!(/^[0-9A-Za-z]+$/.test(input))) return false
 
             switch (input.substring(0,4)) {
-                case "Sumo":
-                case "RYoL":
-                case "Suto":
-                case "RYoT":
-                    return input.length === 99
+				case "Shade":
+				case "cash":
+				case "Suto":
+				case "Te":
+					return input.length === 99
 
-                case "Subo":
-                case "Suso":
-                    return input.length == 98
+					return input.length == 98
 
-                case "RYoS":
-                case "RYoU":
-                    return input.length == 99
+				case "Suba":
+				case "Ts":
+					return input.length == 99
 
-                case "Sumi":
-                case "RYoN":
-                case "Suti":
-                case "RYoE":
-                    return input.length === 110
+				case "Shadow":
+				case "casi":
+				case "Suti":
+				case "Ti":
+					return input.length === 110
 
-                case "RYoK":
-                case "RYoH":
-                    return input.length === 55
+				case "Shad3":
+				case "Tu":
+					return input.length === 55
 
-                default:
+				default:
                     return false
             }
         },

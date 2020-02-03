@@ -203,9 +203,9 @@ module.exports = function (ctx) {
             builder: {
                 // https://www.electron.build/configuration/configuration
 
-                appId: "com.ryo-currency.wallet",
-                productName: "Ryo Wallet Atom",
-                copyright: "Copyright © 2019 Ryo Currency Project",
+                appId: "com.ombre-gui.wallet",
+                productName: "Ombre GUI Wallet",
+                copyright: "Copyright © 2020 Ombre Project",
 
                 // directories: {
                 //     buildResources: "src-electron/build"
@@ -219,17 +219,17 @@ module.exports = function (ctx) {
 
                 win: {
                     target: ["zip"],
-                    icon: "src-electron/icons/icon.ico"
+                    icon: "src-electron/icons/iconO.ico"
                 },
 
                 mac: {
                     target: ["dmg"],
-                    icon: "src-electron/icons/icon.icns",
+                    icon: "src-electron/icons/iconO.icns",
                     category: "public.app-category.finance"
                 },
 
                 dmg: {
-                    background: "src-electron/build/ryo-dmg.tiff"
+                    background: "src-electron/build/ombre-dmg.tiff"
                 },
 
                 extraResources: [
