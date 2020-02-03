@@ -12,7 +12,7 @@
 
             <img src="statics/ombre.svg" width="600" class="q-mb-md">
 
-            <div>Version: ATOM v{{version}}-v{{daemonVersion}}</div>
+            <div>Version: Shadow v{{version}}-v{{daemonVersion}}</div>
 
             <h6 class="q-mb-md" style="font-weight: 300">Select Appearance:</h6>
 
