@@ -90,9 +90,9 @@ export class WalletRPC {
                     fs.truncateSync(log_file, 0)
 
                 if (process.platform === "win32") {
-                    this.walletRPCProcess = child_process.spawn(path.join(__ryo_bin, "ryo-wallet-rpc.exe"), args)
+                    this.walletRPCProcess = child_process.spawn(path.join(__ryo_bin, "ombre-wallet-rpc.exe"), args)
                 } else {
-                    this.walletRPCProcess = child_process.spawn(path.join(__ryo_bin, "ryo-wallet-rpc"), args, {
+                    this.walletRPCProcess = child_process.spawn(path.join(__ryo_bin, "ombre-wallet-rpc"), args, {
                         detached: true
                     })
                 }

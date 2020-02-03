@@ -25,7 +25,7 @@ export class Daemon {
     checkVersion() {
         return new Promise((resolve, reject) => {
             if (process.platform === "win32") {
-                let ryod_path = path.join(__ryo_bin, "ryod.exe")
+                let ryod_path = path.join(__ryo_bin, "ombred.exe")
                 let ryod_version_cmd = `"${ryod_path}" --version`
                 if (!fs.existsSync(ryod_path))
                     resolve(false)
@@ -35,7 +35,7 @@ export class Daemon {
                     resolve(stdout)
                 })
             } else {
-                let ryod_path = path.join(__ryo_bin, "ryod")
+                let ryod_path = path.join(__ryo_bin, "ombred")
                 let ryod_version_cmd = `"${ryod_path}" --version`
                 if (!fs.existsSync(ryod_path))
                     resolve(false)
@@ -124,10 +124,10 @@ export class Daemon {
             if(options.app.testnet) {
                 this.testnet = true
                 args.push("--testnet")
-                args.push("--log-file", path.join(options.app.data_dir, "testnet", "logs", "ryod.log"))
+                args.push("--log-file", path.join(options.app.data_dir, "testnet", "logs", "ombred.log"))
                 args.push("--add-peer", "45.77.68.151:13310")
             } else {
-                args.push("--log-file", path.join(options.app.data_dir, "logs", "ryod.log"))
+                args.push("--log-file", path.join(options.app.data_dir, "logs", "ombred.log"))
             }
 
             if(options.daemon.rpc_bind_ip !== "127.0.0.1")
@@ -141,9 +141,9 @@ export class Daemon {
             }
 
             if (process.platform === "win32") {
-                this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "ryod.exe"), args)
+                this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "ombred.exe"), args)
             } else {
-                this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "ryod"), args, {
+                this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "ombred"), args, {
                     detached: true
                 })
             }

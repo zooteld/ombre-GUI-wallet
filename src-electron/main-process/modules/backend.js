@@ -21,10 +21,10 @@ export class Backend {
     init() {
 
         if(os.platform() == "win32") {
-	    this.config_dir = "C:\\ProgramData\\ryo";
-	    //this.config_dir = path.join(os.homedir(), "ryo");
+	    this.config_dir = "C:\\ProgramData\\ombre";
+	    //this.config_dir = path.join(os.homedir(), "ombre");
         } else {
-            this.config_dir = path.join(os.homedir(), ".ryo");
+            this.config_dir = path.join(os.homedir(), ".ombre");
         }
 
         if (!fs.existsSync(this.config_dir)) {
@@ -205,9 +205,9 @@ export class Backend {
 
 
             case "open_explorer":
-                let explorer_url = "https://explorer.ryo-currency.com"
+                let explorer_url = "http://explorer.ombrecoin.com/"
                 if(this.config_data.app.testnet) {
-                    explorer_url = "https://tnexp.ryoblocks.com"
+                    explorer_url = "http://explorer.ombrecoin.com/"
                 }
                 if(params.type == "tx") {
                     require("electron").shell.openExternal(`${explorer_url}/tx/${params.id}`)
