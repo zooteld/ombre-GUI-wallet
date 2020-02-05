@@ -25,7 +25,7 @@
         <div class="row q-pt-sm q-mx-md q-mb-none items-center non-selectable" style="height: 44px;">
 
             <div class="col-8">
-                <q-icon name="call_made" size="24px" /> Send Ryo
+                <q-icon name="call_made" size="24px" /> Send Ombre
             </div>
 
             <div class="col-4">
@@ -340,9 +340,9 @@ export default {
                 has_payment_id = true
             } else {
                 switch(this.newTx.address.substring(0, 4)) {
-                    case "RYoN":
-                    case "Sumi":
-                    case "RYoE":
+                    case "casi":
+                    case "Shadow":
+                    case "Ti":
                     case "Suti":
                         has_payment_id = true
                         break
@@ -351,10 +351,8 @@ export default {
 
             let is_subaddress = false
             switch(this.newTx.address.substring(0, 4)) {
-                case "RYoS":
-                case "Subo":
-                case "RYoU":
-                case "Susu":
+                case "Suba":
+                case "Ts":
                     is_subaddress = true
                     break
             }

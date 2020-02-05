@@ -90,9 +90,9 @@ export class WalletRPC {
                     fs.truncateSync(log_file, 0)
 
                 if (process.platform === "win32") {
-                    this.walletRPCProcess = child_process.spawn(path.join(__ryo_bin, "ombre-wallet-rpc.exe"), args)
+                    this.walletRPCProcess = child_process.spawn(path.join(__omb_bin, "ombre-wallet-rpc.exe"), args)
                 } else {
-                    this.walletRPCProcess = child_process.spawn(path.join(__ryo_bin, "ombre-wallet-rpc"), args, {
+                    this.walletRPCProcess = child_process.spawn(path.join(__omb_bin, "ombre-wallet-rpc"), args, {
                         detached: true
                     })
                 }
@@ -853,8 +853,8 @@ export class WalletRPC {
                 wallet.address_list.unused = wallet.address_list.unused.slice(0,10)
 
                 if(wallet.address_list.unused.length < num_unused_addresses &&
-                   !wallet.address_list.primary[0].address.startsWith("RYoK") &&
-                   !wallet.address_list.primary[0].address.startsWith("RYoH")) {
+                   !wallet.address_list.primary[0].address.startsWith("Shad3") &&
+                   !wallet.address_list.primary[0].address.startsWith("Tu")) {
                     for(let n = wallet.address_list.unused.length; n < num_unused_addresses; n++) {
                         this.sendRPC("create_address", {account_index: 0}).then((data) => {
                             wallet.address_list.unused.push(data.result)
@@ -1140,9 +1140,9 @@ export class WalletRPC {
             wallets.legacy = []
             let legacy_paths = []
             if(os.platform() == "win32") {
-	        legacy_paths = ["C:\\ProgramData\\RyoGUIWallet", "C:\\ProgramData\\RyoLITEWallet"]
+	        legacy_paths = ["C:\\ProgramData\\OmbreGUIWallet", "C:\\ProgramData\\OmbreLITEWallet"]
             } else {
-	        legacy_paths = [path.join(os.homedir(), "RyoGUIWallet"), path.join(os.homedir(), "RyoLITEWallet")]
+	        legacy_paths = [path.join(os.homedir(), "OmbreGUIWallet"), path.join(os.homedir(), "OmbreLITEWallet")]
             }
             for(var i = 0; i < legacy_paths.length; i++) {
                 let legacy_config_path = path.join(legacy_paths[i], "config", "wallet_info.json")

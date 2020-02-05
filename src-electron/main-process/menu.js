@@ -35,7 +35,7 @@ let template = [
         submenu: [
             {
                 label: "Learn More",
-                click () { require("electron").shell.openExternal("https://ryo-currency.com/") }
+                click () { require("electron").shell.openExternal("http://www.ombrecoin.com/") }
             }
         ]
     }

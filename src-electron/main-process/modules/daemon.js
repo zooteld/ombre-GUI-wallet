@@ -25,21 +25,21 @@ export class Daemon {
     checkVersion() {
         return new Promise((resolve, reject) => {
             if (process.platform === "win32") {
-                let ryod_path = path.join(__ryo_bin, "ombred.exe")
-                let ryod_version_cmd = `"${ryod_path}" --version`
-                if (!fs.existsSync(ryod_path))
+                let ombred_path = path.join(__omb_bin, "ombred.exe")
+                let ombred_version_cmd = `"${ombred_path}" --version`
+                if (!fs.existsSync(ombred_path))
                     resolve(false)
-                child_process.exec(ryod_version_cmd, (error, stdout, stderr) => {
+                child_process.exec(ombred_version_cmd, (error, stdout, stderr) => {
                     if(error)
                         resolve(false)
                     resolve(stdout)
                 })
             } else {
-                let ryod_path = path.join(__ryo_bin, "ombred")
-                let ryod_version_cmd = `"${ryod_path}" --version`
-                if (!fs.existsSync(ryod_path))
+                let ombred_path = path.join(__omb_bin, "ombred")
+                let ombred_version_cmd = `"${ombred_path}" --version`
+                if (!fs.existsSync(ombred_path))
                     resolve(false)
-                child_process.exec(ryod_version_cmd, {detached: true}, (error, stdout, stderr) => {
+                child_process.exec(ombred_version_cmd, {detached: true}, (error, stdout, stderr) => {
                     if(error)
                         resolve(false)
                     resolve(stdout)
@@ -141,9 +141,9 @@ export class Daemon {
             }
 
             if (process.platform === "win32") {
-                this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "ombred.exe"), args)
+                this.daemonProcess = child_process.spawn(path.join(__omb_bin, "ombred.exe"), args)
             } else {
-                this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "ombred"), args, {
+                this.daemonProcess = child_process.spawn(path.join(__omb_bin, "ombred"), args, {
                     detached: true
                 })
             }

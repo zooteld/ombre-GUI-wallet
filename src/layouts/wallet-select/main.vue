@@ -11,9 +11,9 @@
                    @click="cancel()" />
         </template>
 
-        <q-toolbar-title v-if="page_title=='Ryo'">
+        <q-toolbar-title v-if="page_title=='Ombre'">
             <div style="margin-top:7px">
-                <img src="statics/ryo-wallet.svg" height="32">
+                <img src="statics/omb-wallet.svg" height="32">
             </div>
         </q-toolbar-title>
         <q-toolbar-title v-else>
@@ -64,7 +64,7 @@ export default {
 
                 default:
                 case "wallet-select":
-                    return "Ryo"
+                    return "Ombre"
             }
         }
     },

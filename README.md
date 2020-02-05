@@ -20,7 +20,7 @@ We took best from both ways of sync: remote (speed) and local (reliability). At 
 You can rely on predefined optimum settings, or you can edit settings (list will be expanded):
   - Sync. switch (mixed/local/remote)
   - Lmdb storage path
-  - Various ports (daemon, p2p, ryod, remote etc)
+  - Various ports (daemon, p2p, ombred, remote etc)
   - Remote node URL
   - Bandwidth utilization (upload/download speed)
 

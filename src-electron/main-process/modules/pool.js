@@ -1,5 +1,5 @@
-import ryo_utils_promise from "ryo-core-js/ryo_utils/ryo_utils"
-import * as ryo_utils_nettype from "ryo-core-js/ryo_utils/ryo_utils_nettype"
+import omb_utils_promise from "omb-core-js/omb_utils/omb_utils"
+import * as omb_utils_nettype from "omb-core-js/omb_utils/omb_utils_nettype"
 import BigInt from "big-integer"
 import { createServer } from "net"
 import { join } from "path"
@@ -36,17 +36,17 @@ export class Pool {
         this.testnet = testnet
 
         if(testnet) {
-            this.nettype = ryo_utils_nettype.network_type.TESTNET
+            this.nettype = omb_utils_nettype.network_type.TESTNET
             logger.setLogFile(join(data_dir, "testnet", "logs"), "pool.log")
         } else {
-            this.nettype = ryo_utils_nettype.network_type.MAINNET
+            this.nettype = omb_utils_nettype.network_type.MAINNET
             logger.setLogFile(join(data_dir, "logs"), "pool.log")
         }
         logger.log("info", "Logger initialized")
 
         this.database = new Database(this, { testnet, data_dir })
 
-        ryo_utils_promise.then(core_bridge => {
+        omb_utils_promise.then(core_bridge => {
             this.core_bridge = core_bridge
 
             // Initial check to make sure construct block blob is working with known values
@@ -190,9 +190,9 @@ export class Pool {
     }
 
     checkHeight() {
-        let url = "https://explorer.ryoblocks.com/api/networkinfo"
+        let url = "http://explorer.ombrecoin.com/"
         if(this.testnet) {
-            url = "https://tnexp.ryoblocks.com/api/networkinfo"
+            url = "http://explorer.ombrecoin.com/"
         }
         return request(url)
     }

@@ -58,14 +58,14 @@ export class Backend {
 
             daemon: {
                 type: "local_remote",
-                remote_host: "geo.ryoblocks.com",
-                remote_port: 12211,
+                remote_host: "144.91.77.44",
+                remote_port: 19744,
                 p2p_bind_ip: "0.0.0.0",
-                p2p_bind_port: 12210,
+                p2p_bind_port: 19743,
                 rpc_bind_ip: "127.0.0.1",
-                rpc_bind_port: 12211,
+                rpc_bind_port: 19744,
                 zmq_rpc_bind_ip: "127.0.0.1",
-                zmq_rpc_bind_port: 12212,
+                zmq_rpc_bind_port: 19745,
                 out_peers: 8,
                 in_peers: 0,
                 limit_rate_up: -1,
@@ -75,7 +75,7 @@ export class Backend {
             },
 
             wallet: {
-                rpc_bind_port: 12214,
+                rpc_bind_port: 19744,
                 log_level: 0
             },
 
@@ -409,7 +409,7 @@ export class Backend {
                         config: this.config_data,
                         pending_config: this.config_data,
                     });
-                    this.send("show_notification", {type: "warning", textColor: "black", message: "Warning: ryod not found, using remote node", timeout: 2000})
+                    this.send("show_notification", {type: "warning", textColor: "black", message: "Warning: ombred not found, using remote node", timeout: 2000})
                 }
 
 

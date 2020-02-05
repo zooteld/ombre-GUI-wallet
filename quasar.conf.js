@@ -31,11 +31,11 @@ module.exports = function (ctx) {
             sourceMap: true,
             extendWebpack(cfg) {
                 cfg.module.rules.push({
-                    test: /RyoCoreCpp\.js$/,
+                    test: /ombCoreCpp\.js$/,
                     loader: "exports-loader"
                 })
                 cfg.module.rules.push({
-                    test:  /RyoCoreCpp\.wasm$/,
+                    test:  /ombCoreCpp\.wasm$/,
                     type: "javascript/auto",
                     loader: "file-loader",
                     options: {
@@ -172,11 +172,11 @@ module.exports = function (ctx) {
             bundler: "builder", // or "packager"
             extendWebpack(cfg) {
                 cfg.module.rules.push({
-                    test: /RyoCoreCpp\.js$/,
+                    test: /ombCoreCpp\.js$/,
                     loader: "exports-loader"
                 })
                 cfg.module.rules.push({
-                    test:  /RyoCoreCpp\.wasm$/,
+                    test:  /ombCoreCpp\.wasm$/,
                     type: "javascript/auto",
                     loader: "file-loader",
                     options: {

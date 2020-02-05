@@ -11,9 +11,9 @@ const path = require("path");
  */
 if (process.env.PROD) {
     global.__statics = path.join(__dirname, "statics").replace(/\\/g, "\\\\")
-    global.__ryo_bin = path.join(__dirname, "..", "bin").replace(/\\/g, "\\\\")
+    global.__omb_bin = path.join(__dirname, "..", "bin").replace(/\\/g, "\\\\")
 } else {
-    global.__ryo_bin = path.join(process.cwd(), "bin").replace(/\\/g, "\\\\")
+    global.__omb_bin = path.join(process.cwd(), "bin").replace(/\\/g, "\\\\")
 }
 
 let mainWindow, backend, tray
@@ -137,7 +137,7 @@ app.on("ready", () => {
         tray = new Tray(path.join(__statics, "icon_32x32.png"))
         const contextMenu = Menu.buildFromTemplate([
             {
-                label: "Show Ryo Wallet",
+                label: "Show Ombre Wallet",
                 click: function() {
                     if(mainWindow.isMinimized())
                         mainWindow.minimize()
@@ -147,7 +147,7 @@ app.on("ready", () => {
                 }
             },
             {
-                label: "Exit Ryo Wallet",
+                label: "Exit Ombre Wallet",
                 click: function() {
                     if(mainWindow.isMinimized())
                         mainWindow.minimize()
